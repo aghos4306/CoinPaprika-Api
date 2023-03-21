@@ -1,4 +1,7 @@
 package com.aghogho.coinpaprikaapitaskmvvm
 
-class CoinPaprikaApplication {
-}
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class CoinPaprikaApplication: Application()
