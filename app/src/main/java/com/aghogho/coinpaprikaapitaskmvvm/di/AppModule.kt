@@ -2,6 +2,8 @@ package com.aghogho.coinpaprikaapitaskmvvm.di
 
 import com.aghogho.coinpaprikaapitaskmvvm.constants.Constants.COIN_PAPRIKA_BASE_URL
 import com.aghogho.coinpaprikaapitaskmvvm.model.network.CoinPaprikaApi
+import com.aghogho.coinpaprikaapitaskmvvm.model.repository.CoinPaprikaRepository
+import com.aghogho.coinpaprikaapitaskmvvm.model.repository.CoinPaprikaRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,6 +24,12 @@ object AppModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(CoinPaprikaApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideCoinPaprikaRepository(coinPaprikaApi: CoinPaprikaApi): CoinPaprikaRepository {
+        return CoinPaprikaRepositoryImpl(coinPaprikaApi)
     }
 
 }
