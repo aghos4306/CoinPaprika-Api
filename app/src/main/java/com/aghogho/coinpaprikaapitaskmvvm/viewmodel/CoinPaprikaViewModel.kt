@@ -2,6 +2,7 @@ package com.aghogho.coinpaprikaapitaskmvvm.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.aghogho.coinpaprikaapitaskmvvm.constants.Resource
 import com.aghogho.coinpaprikaapitaskmvvm.model.remote.CoinPaprikaData
 import com.aghogho.coinpaprikaapitaskmvvm.model.remote.datail.CoinPaprikaDetailData
 import com.aghogho.coinpaprikaapitaskmvvm.model.repository.CoinPaprikaRepository
@@ -19,6 +20,7 @@ class CoinPaprikaViewModel @Inject constructor(
 
     private val disposable = CompositeDisposable()
     val getAllCoins = MutableLiveData<List<CoinPaprikaData>>()
+    //val getAllCoins = MutableLiveData<Resource<List<CoinPaprikaData>>>()
     val getCoinDetailById = MutableLiveData<CoinPaprikaDetailData>()
 
     val isCoinLoading = MutableLiveData<Boolean>()
