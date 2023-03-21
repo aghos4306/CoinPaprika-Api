@@ -18,13 +18,13 @@ fun CoinPaprikaAllCoinsScreen(
     Box(modifier = Modifier.fillMaxSize()) {
     val allCoins = viewModel.getAllCoins
         LazyColumn(modifier = Modifier.fillMaxSize()) {
-            items(allCoins) {
-                CoinPaprikaListItem(coin = allCoins
-                    onCoinClicked {
-                        navController.navigate(Screen.CoinPaprikaDetailCoinScreen.route)
-                    }
-                )
-            }
+//            items(allCoins) {
+//                CoinPaprikaListItem(coin = allCoins
+//                    onCoinClicked {
+//                        navController.navigate(Screen.CoinPaprikaDetailCoinScreen.route)
+//                    }
+//                )
+//            }
 
         }
     }
